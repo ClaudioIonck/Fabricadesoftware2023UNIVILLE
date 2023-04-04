@@ -1,4 +1,4 @@
-package br.univille.projfabsoft2023.entity;
+package br.univille.projetofabsoft2023.entity;
 
 import java.util.ArrayList;
 import java.util.List;
