@@ -5,4 +5,6 @@ import br.univille.projetofabsoft2023.entity.Gerente;
 
 public interface GerenteService {
     List<Gerente> getAll();
+
+    void save(Gerente gerente);
 }

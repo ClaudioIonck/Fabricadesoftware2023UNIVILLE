@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+    lang="en">
+
+<head th:include="layout :: htmlhead"></head>
+
+<body>
+    <nav th:replace="layout :: menu">(menu)</nav>
+    <main class="container">
+        <a th:href="@{/gerente/novo}" class="btn btn-primary">Novo</a>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="umGerente : ${listaGerent}">
+                    <td th:text="${umGerente.nome}"></td>
+                    <td> <a class="btn btn-secondary" 
+                        th:href="@{'/gerente/alterar/' + ${umGerente.id}}">Alterar</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <div th:include="layout :: footer">(footer)</div>
+</body>
+</html>
