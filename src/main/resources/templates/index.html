@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Form</title>
+  <link rel="stylesheet" href="./styleIndex.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section class="form-container">
+		<form class="">
+			<h1 class="form-header">Formulario</h1>
+			<div class="form">
+				<div class="form-item form-item1">
+					<label for="firstname">Nome</label>
+					<input id="firstname" type="text" name="firstname"/>
+				</div>
+				
+				<div class="form-item form-item1">
+					<label for="lastname">Sobrenome</label>
+					<input for="lastname" type="text" name="lastname"/>
+				</div>
+				
+				<div class="form-item form-item2">
+					<label for="phonenumber">Telefone</label>
+					<input id="phonenumber" type="tel"name="phonenumber"/>
+				</div>
+
+				<div class="form-item form-item2">
+					<label for="email">Email</label>
+					<input id="email" type="email" name="email"/>
+				</div>
+
+				<div class="form-item form-item3">
+					<label for="time frame">Tipo de negocio</label>
+					<select name="time frame">
+						<option value="week-1">Negocio 1</option>
+						<option value="week-2">Negocio 2</option>
+						<option value="week-3">Negocio 3</option>
+						<option value="month-1">Negocio 4</option>
+						<option value="month-3">Negocio 5</option>
+					</select>
+				</div>
+
+				<div class="form-item form-item3">
+					<label for="has website">Ja operou conosco?</label>
+					<select name="has website">
+						<option value="form-no">Sim</option>
+						<option value="form-yes">Não</option>
+					</select>
+				</div>
+				
+				<div class="textarea-div form-item4">
+					<label for="message">Informações adicionais</label>
+					<textarea id="message" type="text" name="message" placeholder="Fale mais sobre sua empresa..."></textarea>
+				</div>
+				<div class="btn-container">
+					<input id="submit" class="btn btn-glow form-btn" type="submit" name="submit" value="ENVIAR"/>
+				</div>
+			</div>
+		</form>
+	</section>
+<!-- partial -->
+  
+</body>
+</html>
