@@ -6,21 +6,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import br.univille.projetofabsoft2023.service.ClienteService;
+import br.univille.projetofabsoft2023.service.GerenteService;
 
 @Controller
-@RequestMapping("/cliente")
-public class ClienteController {
+@RequestMapping("/gerente")
+public class GerenteController {
 
     @Autowired
-    private ClienteService clienteService;
+    private GerenteService gerenteService;
 
     @GetMapping
     public ModelAndView index() {
+        var listaGerente = gerenteService.getAll();
 
-        var listaCliente = clienteService.getAll();
-
-        return new ModelAndView("user/cliente/index", "listaClientes", listaCliente);
+        return new ModelAndView("User/Gerente/index", "listaGerente", listaGerente);
     }
-
 }

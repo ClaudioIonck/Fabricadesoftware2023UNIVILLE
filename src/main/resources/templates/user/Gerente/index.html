@@ -14,11 +14,11 @@
 
     <!-- Conteudo da página -->
         <main class="container">
-          <a th:href="@{/cliente/novo}" class="btn btn-primary">Novo</a>
+          <a th:href="@{/gerente/novo}" class="btn btn-primary">Novo</a>
 
 
 
-          <table class="table" id="tabelaCliente">
+          <table class="table" id="tabelaGerente">
 
             <thead>
 
@@ -38,20 +38,20 @@
 
 
             <tbody>
-              <tr th:each="umCliente : ${listaClientes}">
+              <tr th:each="umGerente : ${listaGerente}">
 
-                <td th:text="${umCliente.Id}"></td>
-                <td th:text="${umCliente.Username}"></td>
-                <td th:text="${umCliente.Email}"></td>
-                <td th:text="${umCliente.Password}"></td>
+                <td th:text="${umGerente.Id}"></td>
+                <td th:text="${umGerente.Username}"></td>
+                <td th:text="${umGerente.Email}"></td>
+                <td th:text="${umGerente.Password}"></td>
 
 
-                <td><a th:href="@{'/cliente/alterar/' + ${umCliente.Id}}" class="btn btn-primary">Alterar</a></td>
+                <td><a th:href="@{'/gerente/alterar/' + ${umGerente.Id}}" class="btn btn-primary">Alterar</a></td>
     
                 <td>
     
                   <button class="btn btn-danger js-delete"
-                      th:data-id="${umCliente.Id}">
+                      th:data-id="${umGerente.Id}">
                       Excluir
                   </button>
                 </td>
