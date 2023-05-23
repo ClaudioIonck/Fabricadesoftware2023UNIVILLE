@@ -5,94 +5,84 @@
     <head th:include="layout :: htmlhead"></head>
 
     <body>
-
 		<!-- Isso aqui é a importação do menu de navegação-->
         <nav th:replace="layout :: menu">(menu)</nav>
 
 
-
-
     <!-- Conteudo da página -->
         <main class="container">
-          <a th:href="@{/cliente/novo}" class="btn btn-primary">Novo</a>
+
+            <a th:href="@{/cliente/novo}" class="btn btn-primary">Novo</a>
 
 
+            <table class="table" id="tabelaCliente">
 
-          <table class="table" id="tabelaCliente">
+                <thead>
 
-            <thead>
 
-              <tr>
-                <th>Id</th>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Password</th>
+                    <tr>
+
+                        <th>Id</th>
+
+                        <th>Username</th>
+
+                        <th>Email</th>
+
+                        <th>Password</th>
+
+                        
+                
+                
+                        <th>Alterar</th>
+                
+                        <th>Deletar</th>
+
+              
+                    </tr>
+              
+            
+                </thead>
+
+            
+                <tbody>
+              
+                    <tr th:each="umCliente : ${listaClientes}">
+                
+                        <td th:text="${umCliente.Id}"></td>
+                
+                        <td th:text="${umCliente.Username}"></td>
+                
+                        <td th:text="${umCliente.Email}"></td>
+                
+                        <td th:text="${umCliente.Password}"></td>
+
 
                 
-                <th>Alterar</th>
-                <th>Deletar</th>
-
-              </tr>
-              
-            </thead>
-
-
-            <tbody>
-              <tr th:each="umCliente : ${listaClientes}">
-
-                <td th:text="${umCliente.Id}"></td>
-                <td th:text="${umCliente.Username}"></td>
-                <td th:text="${umCliente.Email}"></td>
-                <td th:text="${umCliente.Password}"></td>
-
-
-                <td><a th:href="@{'/cliente/alterar/' + ${umCliente.Id}}" class="btn btn-primary">Alterar</a></td>
+                        <td>
+                            <a th:href="@{'/cliente/alterar/' + ${umCliente.Id}}" class="btn btn-primary">Alterar</a>
+                        </td>
     
-                <td>
+                
+                        <td>
+                            <button class="btn btn-danger js-delete" th:data-id="${umCliente.Id}">Excluir</button>
+                        </td>
     
-                  <button class="btn btn-danger js-delete"
-                      th:data-id="${umCliente.Id}">
-                      Excluir
-                  </button>
-                </td>
-    
-              </tr>
-            </tbody>
-          </table>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
         </main>
     
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!-- Modal da pergunta se quer excluir -->
-<!--      <div class="modal-content">
+        <div class="modal" tabindex="-1" id="modalUser">
+            <div class="modal-dialog">
+              <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Excluir usuário</h5>
+                  <h5 class="modal-title">Excluir cliente</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -109,8 +99,8 @@
 
         <div th:include="layout :: footer">(footer)</div>
 
-        <script th:src="@{/script.js}"></script>
-      -->
+        <script th:src="@{/scriptCliente.js}"></script>
+      
     </body>
 
 </html>
