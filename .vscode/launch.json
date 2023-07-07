@@ -5,33 +5,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Java",
-            "type": "java",
-            "request": "launch",
-            "stopOnEntry": true,
-            "jdkPath": "${env:JAVA_HOME}/bin",
-            "cwd": "${fileDirname}",
-            "startupClass": "${fileBasenameNoExtension}",
-            "classpath": [
-                ".",
-                "${fileDirname}"
-            ]
-        },
-        {
-            "name": "Java Console App",
-            "type": "java",
-            "request": "launch",
-            "stopOnEntry": true,
-            "jdkPath": "${env:JAVA_HOME}/bin",
-            "cwd": "${fileDirname}",
-            "startupClass": "${fileBasenameNoExtension}",
-            "classpath": [
-                ".",
-                "${fileDirname}"
-            ],
-            "externalConsole": true
-        },
-        {
             "type": "java",
             "name": "Current File",
             "request": "launch",
@@ -39,10 +12,10 @@
         },
         {
             "type": "java",
-            "name": "Projetofabsoft2023Application",
+            "name": "Projfabsoft2023Application",
             "request": "launch",
-            "mainClass": "br.univille.projetofabsoft2023.Projetofabsoft2023Application",
-            "projectName": "projetofabsoft2023",
+            "mainClass": "br.univille.projfabsoft2023.Projfabsoft2023Application",
+            "projectName": "projfabsoft2023",
             "args": "--spring.profiles.active=dev"
         }
     ]
